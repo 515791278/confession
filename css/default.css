@@ -64,6 +64,13 @@
     display: none
 }
 
+#name {
+    padding: 5px;
+    font-size: 22px;
+    text-align: right;
+    display: none
+}
+
 #code {
     float: left;
     width: 440px;

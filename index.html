@@ -67,42 +67,100 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-var offsetX = $("#loveHeart").width() / 2;
-var offsetY = $("#loveHeart").height() / 2 - 55;
-var together = new Date();
-together.setFullYear(2017, 12, 26);
-together.setHours(20);
-together.setMinutes(0);
-together.setSeconds(0);
-together.setMilliseconds(0);
-
-if (!document.createElement('canvas').getContext) {
-	var msg = document.createElement("div");
-	msg.id = "errorMsg";
-	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-	document.body.appendChild(msg);
-	$("#code").css("display", "none")
-	$("#copyright").css("position", "absolute");
-	$("#copyright").css("bottom", "10px");
-	document.execCommand("stop");
-} else {
-	setTimeout(function () {
-		startHeartAnimation();
-	}, 5000);
-
-	timeElapse(together);
-	setInterval(function () {
-		timeElapse(together);
-	}, 500);
-
-	adjustCodePosition();
-	$("#code").typewriter();
-}
-</script>
 <div style="text-align:center;clear:both">
-<p> </p>
-<p>来源：<a href="https://github.com/515791278" target="_blank">黄黄love张玉</a></p>
+
+	<table  border="1px" cellspacing="0px" align="center" style="margin:auto" >
+		<tr >
+			<td  >初见</td>
+			<td  >约会</td>
+			<td  >表白</td>
+			<td  >牵手</td>
+		</tr>
+		<tr >
+			<td  >2014年9月29日</td>
+			<td  >2014年10月18日</td>
+			<td  >2014年12月07日</td>
+			<td  >2014年12月10日</td>
+		</tr>
+		<tr>
+			<td id="date1">初见</td>
+			<td id="date2">约会</td>
+			<td id="date3">表白</td>
+			<td id="date4">牵手</td>
+
+		</tr>
+	</table>
+
+<p>爱的代码仓库：<a href="https://github.com/515791278" target="_blank">黄黄love张玉</a></p>
 </div>
+
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date();
+    together.setFullYear(2017, 12, 26);
+    together.setHours(20);
+    together.setMinutes(0);
+    together.setSeconds(0);
+    together.setMilliseconds(0);
+
+
+    var date1 = new Date();
+    date1.setFullYear(2014, 8, 29);
+    date1.setHours(18);
+    date1.setMinutes(34);
+    date1.setSeconds(12);
+    date1.setMilliseconds(0);
+    var date2 = new Date();
+    date2.setFullYear(2014, 9, 18);
+    date2.setHours(18);
+    date2.setMinutes(45);
+    date2.setSeconds(34);
+    date2.setMilliseconds(30);
+    var date3 = new Date();
+    date3.setFullYear(2014, 11, 7);
+    date3.setHours(21);
+    date3.setMinutes(20);
+    date3.setSeconds(50);
+    date3.setMilliseconds(5);
+    var date4 = new Date();
+    date4.setFullYear(2014, 11, 10);
+    date4.setHours(20);
+    date4.setMinutes(49);
+    date4.setSeconds(23);
+    date4.setMilliseconds(23);
+    timeTable(date1 ,"#date1");
+    timeTable(date2 ,"#date2");
+    timeTable(date3 ,"#date3");
+    timeTable(date4 ,"#date4");
+    setInterval(function () {
+        timeTable(date1 ,"#date1");
+        timeTable(date2 ,"#date2");
+        timeTable(date3 ,"#date3");
+        timeTable(date4 ,"#date4");
+    }, 500);
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none")
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
+
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
 </body>
 </html>
